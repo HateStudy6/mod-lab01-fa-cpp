@@ -16,7 +16,7 @@ unsigned int faStr1(const char* str)
      if (isdigit(str[i]))
       {sl2+=1;}
      if (isspace(str[i]))
-      {if ((sl1>0)&&(sl2==0))
+      {if ((sl1>0)&&(sl2 == 0))
       {stroka++;}
       sl1=0;
       sl2=0;
@@ -37,7 +37,7 @@ unsigned int faStr2(const char* str)
     if (isupper(str[i]) && (sl1=0))
     { sl1=1;}
     if (isspace(str[i]))
-    {if ((sl1=1) && (sl2==0))
+    {if ((sl1=1) && (sl2 == 0))
     {stroka++;}
     sl1=0;
     sl2=0;
@@ -59,13 +59,13 @@ unsigned int faStr3(const char* str)
             sl2++; 
             stroka=1;
         }
-        if (isspace(str[i]) && (stroka==1))
+        if (isspace(str[i]) && (stroka == 1))
         {
             sl1++;
             stroka = 0;
         }
     }
-    if (stroka==1)
+    if (stroka == 1)
     {sl1++;}
     SrDlina = static_cast<double>(sl2)/sl1;
     return round(SrDlina);
