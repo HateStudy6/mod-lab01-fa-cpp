@@ -3,8 +3,7 @@
 #include <cstring>
 #include <cmath>
 
-#include "fun.h"
-
+#include "fun.h" 
 unsigned int faStr1(const char* str)
 { 
   int sl1 = 0; int sl2 = 0; int stroka = 0;
