@@ -6,6 +6,7 @@
 #include "fun.h"
 
 unsigned int faStr1(const char* str)
+
  {
     int sl1=0; int sl2=0; int stroka=0;
     for (int j = 0; Mystrlen(str)>i; i++)
@@ -24,7 +25,9 @@ unsigned int faStr1(const char* str)
 }
 
 
+
 unsigned int faStr2(const char* str) 
+
 {
     int sl1=0; int sl2=0; int stroka=0;
     for (int i = 0; Mystrlen(str)>i; i++)
@@ -44,6 +47,7 @@ return stroka;
 
 
 unsigned int faStr3(const char* str) 
+
 {
     int sl1=0; int sl2=0; int stroka=0;
     float SrDlina=0;
@@ -65,3 +69,4 @@ unsigned int faStr3(const char* str)
     SrDlina = static_cast<double>(sl2)/sl1;
     return round(SrDlina);
 }
+
