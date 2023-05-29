@@ -19,15 +19,15 @@ unsigned int faStr1(const char* str)
       sl1 = 0;
       sl2 = 0;
      } 
-     }
- return stroka;
+     } 
+     return stroka;
 } 
 
 
 
 unsigned int faStr2(const char* str)
-{
- int sl1 = 0; int sl2 = 0; int stroka = 0;
+{ 
+    int sl1 = 0; int sl2 = 0; int stroka = 0;
     for (int i = 0; strlen(str) > i; i++ )
     { if (isdigit(str[i]) || ispunct(str[i]))
     { sl2+= 1; }
@@ -39,8 +39,8 @@ unsigned int faStr2(const char* str)
     sl1 = 0;
     sl2 = 0;
     }
-    }
- return stroka;
+    } 
+    return stroka;
 } 
 
 
@@ -63,7 +63,7 @@ unsigned int faStr3(const char* str)
     }
     if (stroka == 1)
     {sl1++;}
-    SrDlina = static_cast<double>(sl2)/sl1;
+    SrDlina = static_cast<double>(sl2)/sl1; 
     return round(SrDlina);
 }
 
