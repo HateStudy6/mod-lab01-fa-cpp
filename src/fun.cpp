@@ -5,60 +5,63 @@
 
 #include "fun.h"
 
-unsigned int faStr1(const char* str) {
-    int  N = 0;
-    bool let = false, num = false;
-    for (int i = 0; i < strlen(str); i++) {
-        if (isalpha(str[i])) {
-            let = true;
-        }
-        if (isdigit(str[i])) {
-            num = true;
-        }
-        if (isspace(str[i]) && let) {
-            if (let && !num) {
-                N++;
-            }
-            let = false;
-            num = false;
-        }
-    }
-    if (let && !num) {
-        N++;
-    }
-    return N;
+unsigned int faStr1(const char* str)
+ {
+    int sl1=0; int sl2=0; int stroka=0;
+    for (int j = 0; Mystrlen(str)>i; i++)
+     { if(isalpha(str[i]))
+     {sl1+=1;}
+     if(isdigit(str[i]))
+     {sl2+=1;}
+     if(isspace(str[i]))
+     {if((sl1>0)&&(sl2==0))
+     {stroka++;}
+     sl1=0;
+     sl2=0;
+     }   
+     }
+    return stroka;
 }
-unsigned int faStr2(const char* str) {
-    int N = 0;
-    bool first = true, check = false;
-    for (int i = 0; i < strlen(str); i++) {
-        if (isupper(str[i]) && first) {
-            first = false;
-        }
-        if (!isalpha(str[i]) && !isspace(str[i]))check = true;
-        if (isspace(str[i])) {
-            if (!check && !first)N++;
-            first = true;
-            check = false;
-        }
+
+
+unsigned int faStr2(const char* str) 
+{
+    int sl1=0; int sl2=0; int stroka=0;
+    for (int i = 0; Mystrlen(str)>i; i++)
+    { if(isdigit(str[i]) || ispunct(str[i]))
+    {sl2+=1;}
+    if(isupper(str[i]) && (sl1=0))
+    {sl1=1;}
+    if(isspace(str[i]))
+    {if((sl1=1) &&(sl2==0))
+    {stroka++;}
+    sl1=0;
+    sl2=0;
     }
-    if (!check && !first)N++;
-    return N;
 }
-unsigned int faStr3(const char* str) {
-    int Nwords = 0, Nlet = 0;
-    bool word = false;
-    for (int i = 0; i < strlen(str); i++) {
-        if (isalpha(str[i])) {
-            Nlet++;
-            word = true;
+return stroka;
+}
+
+
+unsigned int faStr3(const char* str) 
+{
+    int sl1=0; int sl2=0; int stroka=0;
+    float SrDlina=0;
+    for (int i = 0; Mystrlen(str)>i; i++)
+     {
+        if (isalpha(str[i])) 
+        {
+            sl2++;
+            stroka=1;
         }
-        if (isspace(str[i]) && word) {
-            Nwords++;
-            word = false;
+        if (isspace(str[i]) && (stroka==1)) 
+        {
+            sl1++;
+            stroka = 0;
         }
     }
-    if (word)Nwords++;
-    float lenght = static_cast<double>(Nlet) / Nwords;
-    return round(lenght);
+    if (stroka==1)
+    {sl1++;}
+    SrDlina = static_cast<double>(sl2)/sl1;
+    return round(SrDlina);
 }
