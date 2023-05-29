@@ -56,8 +56,8 @@ unsigned int faStr3(const char* str)
      {
         if (isalpha(str[i]))
         {
-            sl2++; 
-            stroka=1;
+         sl2++;
+         stroka=1;
         }
         if (isspace(str[i]) && (stroka == 1))
         {
