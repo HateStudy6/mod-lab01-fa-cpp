@@ -8,11 +8,11 @@
 unsigned int faStr1(const char* str) 
 { 
   int sl1 = 0; int sl2 = 0; int stroka = 0;
-  for (int i= 0; strlen(str) > i; i++ )
+  for (int i = 0; strlen(str) > i; i++ )
   { if (isalpha(str[i]))
-  {sl1 + = 1;}
+  {sl1+= 1;}
   if (isdigit(str[i]))
-  {sl2 + = 1;}
+  {sl2+= 1;}
   if (isspace(str[i]))
   {if ((sl1 > 0)&&(sl2 == 0))
   {stroka++;}
@@ -50,7 +50,7 @@ unsigned int faStr3(const char* str)
     int sl1 = 0; int sl2 = 0; int stroka = 0;
     float SrDlina = 0;
     for (int i = 0; strlen(str) > i; i++)
-    { 
+    {
     if (isalpha(str[i]))
     { sl2++;
     stroka = 1;
